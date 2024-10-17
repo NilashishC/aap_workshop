@@ -1,0 +1,1127 @@
+{
+    "plays": [
+        {
+            "__play_name": "rtr1, rtr2",
+            "name": "rtr1, rtr2",
+            "pattern": "rtr1, rtr2",
+            "play": "rtr1, rtr2",
+            "play_pattern": "rtr1, rtr2",
+            "play_uuid": "0e078a85-63f4-829f-8081-000000000006",
+            "playbook": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml",
+            "playbook_uuid": "2dd3315e-9f86-4849-a405-8c2f6bd9f2c0",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "rtr1",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Load source-of-truth for rtr1",
+                    "__task_action": "ansible.builtin.include_vars",
+                    "duration": 1.327617,
+                    "end": "2024-10-17T11:06:44.339028",
+                    "event_loop": null,
+                    "host": "rtr1",
+                    "play": "rtr1, rtr2",
+                    "play_pattern": "rtr1, rtr2",
+                    "play_uuid": "0e078a85-63f4-829f-8081-000000000006",
+                    "playbook": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml",
+                    "playbook_uuid": "2dd3315e-9f86-4849-a405-8c2f6bd9f2c0",
+                    "remote_addr": "rtr1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "bgp_address_family": {
+                                "address_family": [
+                                    {
+                                        "afi": "ipv4",
+                                        "neighbors": [
+                                            {
+                                                "activate": true,
+                                                "neighbor_address": "10.200.200.2"
+                                            }
+                                        ],
+                                        "networks": [
+                                            {
+                                                "address": "10.100.100.0",
+                                                "mask": "255.255.255.0"
+                                            },
+                                            {
+                                                "address": "10.200.200.0",
+                                                "mask": "255.255.255.0"
+                                            }
+                                        ],
+                                        "redistribute": [
+                                            {
+                                                "ospf": {
+                                                    "process_id": 1
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "as_number": "65000"
+                            },
+                            "bgp_global": {
+                                "as_number": "65000",
+                                "bgp": {
+                                    "log_neighbor_changes": true,
+                                    "router_id": {
+                                        "address": "192.168.1.1"
+                                    }
+                                },
+                                "neighbors": [
+                                    {
+                                        "neighbor_address": "10.200.200.2",
+                                        "remote_as": "65001"
+                                    }
+                                ]
+                            }
+                        },
+                        "ansible_included_var_files": [
+                            "/home/student/network-workshop/aap_workshop/./source-of-truth/bgp/rtr1.yml"
+                        ],
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.include_vars",
+                    "start": "2024-10-17T11:06:43.011411",
+                    "task": "Load source-of-truth for rtr1",
+                    "task_action": "ansible.builtin.include_vars",
+                    "task_args": "",
+                    "task_path": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml:5",
+                    "task_uuid": "0e078a85-63f4-829f-8081-000000000008",
+                    "uuid": "a2abe9b0-a61c-44a8-9ebe-9637739b3e9a"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "1s",
+                    "__host": "rtr2",
+                    "__number": 1,
+                    "__result": "Ok",
+                    "__task": "Load source-of-truth for rtr2",
+                    "__task_action": "ansible.builtin.include_vars",
+                    "duration": 1.358449,
+                    "end": "2024-10-17T11:06:44.379722",
+                    "event_loop": null,
+                    "host": "rtr2",
+                    "play": "rtr1, rtr2",
+                    "play_pattern": "rtr1, rtr2",
+                    "play_uuid": "0e078a85-63f4-829f-8081-000000000006",
+                    "playbook": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml",
+                    "playbook_uuid": "2dd3315e-9f86-4849-a405-8c2f6bd9f2c0",
+                    "remote_addr": "rtr2",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "ansible_facts": {
+                            "bgp_address_family": {
+                                "address_family": [
+                                    {
+                                        "afi": "ipv4",
+                                        "neighbors": [
+                                            {
+                                                "activate": true,
+                                                "neighbor_address": "10.200.200.1"
+                                            }
+                                        ],
+                                        "networks": [
+                                            {
+                                                "address": "10.101.101.0",
+                                                "mask": "255.255.255.0"
+                                            },
+                                            {
+                                                "address": "10.200.200.0",
+                                                "mask": "255.255.255.0"
+                                            }
+                                        ],
+                                        "redistribute": [
+                                            {
+                                                "ospf": {
+                                                    "process_id": 1
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "as_number": "65001"
+                            },
+                            "bgp_global": {
+                                "as_number": "65001",
+                                "bgp": {
+                                    "log_neighbor_changes": true,
+                                    "router_id": {
+                                        "address": "192.168.2.2"
+                                    }
+                                },
+                                "neighbors": [
+                                    {
+                                        "neighbor_address": "10.200.200.1",
+                                        "remote_as": "65000"
+                                    }
+                                ]
+                            }
+                        },
+                        "ansible_included_var_files": [
+                            "/home/student/network-workshop/aap_workshop/./source-of-truth/bgp/rtr2.yml"
+                        ],
+                        "changed": false
+                    },
+                    "resolved_action": "ansible.builtin.include_vars",
+                    "start": "2024-10-17T11:06:43.021273",
+                    "task": "Load source-of-truth for rtr2",
+                    "task_action": "ansible.builtin.include_vars",
+                    "task_args": "",
+                    "task_path": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml:5",
+                    "task_uuid": "0e078a85-63f4-829f-8081-000000000008",
+                    "uuid": "2c3023bf-a942-42ca-8926-500bac4bc7e4"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "rtr1",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Configure BGP Global Configuration on rtr1",
+                    "__task_action": "cisco.ios.ios_bgp_global",
+                    "duration": 2.49805,
+                    "end": "2024-10-17T11:06:46.894903",
+                    "event_loop": null,
+                    "host": "rtr1",
+                    "play": "rtr1, rtr2",
+                    "play_pattern": "rtr1, rtr2",
+                    "play_uuid": "0e078a85-63f4-829f-8081-000000000006",
+                    "playbook": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml",
+                    "playbook_uuid": "2dd3315e-9f86-4849-a405-8c2f6bd9f2c0",
+                    "remote_addr": "rtr1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "before": {
+                            "as_number": "65000",
+                            "bgp": {
+                                "default": {
+                                    "ipv4_unicast": true,
+                                    "route_target": {
+                                        "filter": true
+                                    }
+                                },
+                                "log_neighbor_changes": true,
+                                "router_id": {
+                                    "address": "192.168.1.1"
+                                }
+                            },
+                            "neighbors": [
+                                {
+                                    "neighbor_address": "10.200.200.2",
+                                    "remote_as": "65001"
+                                }
+                            ]
+                        },
+                        "changed": false,
+                        "commands": [],
+                        "invocation": {
+                            "module_args": {
+                                "config": {
+                                    "aggregate_address": null,
+                                    "aggregate_addresses": null,
+                                    "as_number": "65000",
+                                    "auto_summary": null,
+                                    "bgp": {
+                                        "additional_paths": null,
+                                        "advertise_best_external": null,
+                                        "aggregate_timer": null,
+                                        "always_compare_med": null,
+                                        "asnotation": null,
+                                        "bestpath": null,
+                                        "bestpath_options": null,
+                                        "client_to_client": null,
+                                        "cluster_id": null,
+                                        "confederation": null,
+                                        "consistency_checker": null,
+                                        "dampening": null,
+                                        "default": {
+                                            "ipv4_unicast": true,
+                                            "route_target": {
+                                                "filter": true
+                                            }
+                                        },
+                                        "deterministic_med": null,
+                                        "dmzlink_bw": null,
+                                        "enforce_first_as": null,
+                                        "enhanced_error": null,
+                                        "fast_external_fallover": null,
+                                        "graceful_restart": null,
+                                        "graceful_shutdown": null,
+                                        "inject_map": null,
+                                        "inject_maps": null,
+                                        "listen": null,
+                                        "log_neighbor_changes": true,
+                                        "maxas_limit": null,
+                                        "maxcommunity_limit": null,
+                                        "maxextcommunity_limit": null,
+                                        "nexthop": null,
+                                        "nopeerup_delay": null,
+                                        "nopeerup_delay_options": null,
+                                        "recursion": null,
+                                        "redistribute_internal": null,
+                                        "refresh": null,
+                                        "regexp": null,
+                                        "route_map": null,
+                                        "router_id": {
+                                            "address": "192.168.1.1",
+                                            "interface": null,
+                                            "vrf": null
+                                        },
+                                        "scan_time": null,
+                                        "slow_peer": null,
+                                        "snmp": null,
+                                        "soft_reconfig_backup": null,
+                                        "sso": null,
+                                        "suppress_inactive": null,
+                                        "transport": null,
+                                        "update_delay": null,
+                                        "update_group": null,
+                                        "upgrade_cli": null
+                                    },
+                                    "bmp": null,
+                                    "default_information": null,
+                                    "default_metric": null,
+                                    "distance": null,
+                                    "distribute_list": null,
+                                    "distributes": null,
+                                    "maximum_paths": null,
+                                    "maximum_secondary_paths": null,
+                                    "neighbors": [
+                                        {
+                                            "activate": null,
+                                            "additional_paths": null,
+                                            "address": null,
+                                            "advertise": null,
+                                            "advertise_map": null,
+                                            "advertisement_interval": null,
+                                            "aigp": null,
+                                            "allow_policy": null,
+                                            "allowas_in": null,
+                                            "as_override": null,
+                                            "bmp_activate": null,
+                                            "capability": null,
+                                            "cluster_id": null,
+                                            "default_originate": null,
+                                            "description": null,
+                                            "disable_connected_check": null,
+                                            "distribute_list": null,
+                                            "dmzlink_bw": null,
+                                            "ebgp_multihop": null,
+                                            "fall_over": null,
+                                            "filter_list": null,
+                                            "ha_mode": null,
+                                            "inherit": null,
+                                            "ipv6_adddress": null,
+                                            "local_as": null,
+                                            "log_neighbor_changes": null,
+                                            "maximum_prefix": null,
+                                            "neighbor_address": "10.200.200.2",
+                                            "next_hop_self": null,
+                                            "next_hop_unchanged": null,
+                                            "password": null,
+                                            "password_options": null,
+                                            "path_attribute": null,
+                                            "peer_group": null,
+                                            "remote_as": "65001",
+                                            "remove_private_as": null,
+                                            "route_map": null,
+                                            "route_maps": null,
+                                            "route_reflector_client": null,
+                                            "route_server_client": null,
+                                            "send_community": null,
+                                            "send_label": null,
+                                            "shutdown": null,
+                                            "slow_peer": null,
+                                            "soft_reconfiguration": null,
+                                            "tag": null,
+                                            "timers": null,
+                                            "translate_update": null,
+                                            "transport": null,
+                                            "ttl_security": null,
+                                            "unsuppress_map": null,
+                                            "update_source": null,
+                                            "version": null,
+                                            "weight": null
+                                        }
+                                    ],
+                                    "networks": null,
+                                    "redistribute": null,
+                                    "route_server_context": null,
+                                    "scope": null,
+                                    "synchronization": null,
+                                    "table_map": null,
+                                    "template": null,
+                                    "timers": null
+                                },
+                                "running_config": null,
+                                "state": "overridden"
+                            }
+                        }
+                    },
+                    "resolved_action": "cisco.ios.ios",
+                    "start": "2024-10-17T11:06:44.396853",
+                    "task": "Configure BGP Global Configuration on rtr1",
+                    "task_action": "cisco.ios.ios_bgp_global",
+                    "task_args": "",
+                    "task_path": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml:9",
+                    "task_uuid": "0e078a85-63f4-829f-8081-000000000009",
+                    "uuid": "a379f525-8183-4161-9917-263a36054467"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "rtr2",
+                    "__number": 3,
+                    "__result": "Ok",
+                    "__task": "Configure BGP Global Configuration on rtr2",
+                    "__task_action": "cisco.ios.ios_bgp_global",
+                    "duration": 2.409934,
+                    "end": "2024-10-17T11:06:46.817308",
+                    "event_loop": null,
+                    "host": "rtr2",
+                    "play": "rtr1, rtr2",
+                    "play_pattern": "rtr1, rtr2",
+                    "play_uuid": "0e078a85-63f4-829f-8081-000000000006",
+                    "playbook": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml",
+                    "playbook_uuid": "2dd3315e-9f86-4849-a405-8c2f6bd9f2c0",
+                    "remote_addr": "rtr2",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "before": {
+                            "as_number": "65001",
+                            "bgp": {
+                                "default": {
+                                    "ipv4_unicast": true,
+                                    "route_target": {
+                                        "filter": true
+                                    }
+                                },
+                                "log_neighbor_changes": true,
+                                "router_id": {
+                                    "address": "192.168.2.2"
+                                }
+                            },
+                            "neighbors": [
+                                {
+                                    "neighbor_address": "10.200.200.1",
+                                    "remote_as": "65000"
+                                }
+                            ]
+                        },
+                        "changed": false,
+                        "commands": [],
+                        "invocation": {
+                            "module_args": {
+                                "config": {
+                                    "aggregate_address": null,
+                                    "aggregate_addresses": null,
+                                    "as_number": "65001",
+                                    "auto_summary": null,
+                                    "bgp": {
+                                        "additional_paths": null,
+                                        "advertise_best_external": null,
+                                        "aggregate_timer": null,
+                                        "always_compare_med": null,
+                                        "asnotation": null,
+                                        "bestpath": null,
+                                        "bestpath_options": null,
+                                        "client_to_client": null,
+                                        "cluster_id": null,
+                                        "confederation": null,
+                                        "consistency_checker": null,
+                                        "dampening": null,
+                                        "default": {
+                                            "ipv4_unicast": true,
+                                            "route_target": {
+                                                "filter": true
+                                            }
+                                        },
+                                        "deterministic_med": null,
+                                        "dmzlink_bw": null,
+                                        "enforce_first_as": null,
+                                        "enhanced_error": null,
+                                        "fast_external_fallover": null,
+                                        "graceful_restart": null,
+                                        "graceful_shutdown": null,
+                                        "inject_map": null,
+                                        "inject_maps": null,
+                                        "listen": null,
+                                        "log_neighbor_changes": true,
+                                        "maxas_limit": null,
+                                        "maxcommunity_limit": null,
+                                        "maxextcommunity_limit": null,
+                                        "nexthop": null,
+                                        "nopeerup_delay": null,
+                                        "nopeerup_delay_options": null,
+                                        "recursion": null,
+                                        "redistribute_internal": null,
+                                        "refresh": null,
+                                        "regexp": null,
+                                        "route_map": null,
+                                        "router_id": {
+                                            "address": "192.168.2.2",
+                                            "interface": null,
+                                            "vrf": null
+                                        },
+                                        "scan_time": null,
+                                        "slow_peer": null,
+                                        "snmp": null,
+                                        "soft_reconfig_backup": null,
+                                        "sso": null,
+                                        "suppress_inactive": null,
+                                        "transport": null,
+                                        "update_delay": null,
+                                        "update_group": null,
+                                        "upgrade_cli": null
+                                    },
+                                    "bmp": null,
+                                    "default_information": null,
+                                    "default_metric": null,
+                                    "distance": null,
+                                    "distribute_list": null,
+                                    "distributes": null,
+                                    "maximum_paths": null,
+                                    "maximum_secondary_paths": null,
+                                    "neighbors": [
+                                        {
+                                            "activate": null,
+                                            "additional_paths": null,
+                                            "address": null,
+                                            "advertise": null,
+                                            "advertise_map": null,
+                                            "advertisement_interval": null,
+                                            "aigp": null,
+                                            "allow_policy": null,
+                                            "allowas_in": null,
+                                            "as_override": null,
+                                            "bmp_activate": null,
+                                            "capability": null,
+                                            "cluster_id": null,
+                                            "default_originate": null,
+                                            "description": null,
+                                            "disable_connected_check": null,
+                                            "distribute_list": null,
+                                            "dmzlink_bw": null,
+                                            "ebgp_multihop": null,
+                                            "fall_over": null,
+                                            "filter_list": null,
+                                            "ha_mode": null,
+                                            "inherit": null,
+                                            "ipv6_adddress": null,
+                                            "local_as": null,
+                                            "log_neighbor_changes": null,
+                                            "maximum_prefix": null,
+                                            "neighbor_address": "10.200.200.1",
+                                            "next_hop_self": null,
+                                            "next_hop_unchanged": null,
+                                            "password": null,
+                                            "password_options": null,
+                                            "path_attribute": null,
+                                            "peer_group": null,
+                                            "remote_as": "65000",
+                                            "remove_private_as": null,
+                                            "route_map": null,
+                                            "route_maps": null,
+                                            "route_reflector_client": null,
+                                            "route_server_client": null,
+                                            "send_community": null,
+                                            "send_label": null,
+                                            "shutdown": null,
+                                            "slow_peer": null,
+                                            "soft_reconfiguration": null,
+                                            "tag": null,
+                                            "timers": null,
+                                            "translate_update": null,
+                                            "transport": null,
+                                            "ttl_security": null,
+                                            "unsuppress_map": null,
+                                            "update_source": null,
+                                            "version": null,
+                                            "weight": null
+                                        }
+                                    ],
+                                    "networks": null,
+                                    "redistribute": null,
+                                    "route_server_context": null,
+                                    "scope": null,
+                                    "synchronization": null,
+                                    "table_map": null,
+                                    "template": null,
+                                    "timers": null
+                                },
+                                "running_config": null,
+                                "state": "overridden"
+                            }
+                        }
+                    },
+                    "resolved_action": "cisco.ios.ios",
+                    "start": "2024-10-17T11:06:44.407374",
+                    "task": "Configure BGP Global Configuration on rtr2",
+                    "task_action": "cisco.ios.ios_bgp_global",
+                    "task_args": "",
+                    "task_path": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml:9",
+                    "task_uuid": "0e078a85-63f4-829f-8081-000000000009",
+                    "uuid": "a7afebf7-7055-4289-bb6d-713d0ea0e1c0"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "rtr1",
+                    "__number": 4,
+                    "__result": "Ok",
+                    "__task": "Configure BGP Address Family Configuration on rtr1",
+                    "__task_action": "cisco.ios.ios_bgp_address_family",
+                    "duration": 1.782338,
+                    "end": "2024-10-17T11:06:48.686526",
+                    "event_loop": null,
+                    "host": "rtr1",
+                    "play": "rtr1, rtr2",
+                    "play_pattern": "rtr1, rtr2",
+                    "play_uuid": "0e078a85-63f4-829f-8081-000000000006",
+                    "playbook": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml",
+                    "playbook_uuid": "2dd3315e-9f86-4849-a405-8c2f6bd9f2c0",
+                    "remote_addr": "rtr1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "before": {
+                            "address_family": [
+                                {
+                                    "afi": "ipv4",
+                                    "neighbors": [
+                                        {
+                                            "activate": true,
+                                            "neighbor_address": "10.200.200.2"
+                                        }
+                                    ],
+                                    "networks": [
+                                        {
+                                            "address": "10.100.100.0",
+                                            "mask": "255.255.255.0"
+                                        },
+                                        {
+                                            "address": "10.200.200.0",
+                                            "mask": "255.255.255.0"
+                                        }
+                                    ],
+                                    "redistribute": [
+                                        {
+                                            "ospf": {
+                                                "process_id": 1
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "as_number": "65000"
+                        },
+                        "changed": false,
+                        "commands": [],
+                        "invocation": {
+                            "module_args": {
+                                "config": {
+                                    "address_family": [
+                                        {
+                                            "advertise": null,
+                                            "afi": "ipv4",
+                                            "aggregate_addresses": null,
+                                            "auto_summary": null,
+                                            "bgp": null,
+                                            "default": null,
+                                            "default_information": null,
+                                            "default_metric": null,
+                                            "distance": null,
+                                            "neighbors": [
+                                                {
+                                                    "activate": true,
+                                                    "additional_paths": null,
+                                                    "address": null,
+                                                    "advertise": null,
+                                                    "advertise_map": null,
+                                                    "advertisement_interval": null,
+                                                    "advertises": null,
+                                                    "aigp": null,
+                                                    "allow_policy": null,
+                                                    "allowas_in": null,
+                                                    "as_override": null,
+                                                    "bmp_activate": null,
+                                                    "capability": null,
+                                                    "cluster_id": null,
+                                                    "default_originate": null,
+                                                    "description": null,
+                                                    "disable_connected_check": null,
+                                                    "distribute_list": null,
+                                                    "dmzlink_bw": null,
+                                                    "ebgp_multihop": null,
+                                                    "fall_over": null,
+                                                    "filter_list": null,
+                                                    "ha_mode": null,
+                                                    "inherit": null,
+                                                    "internal_vpn_client": null,
+                                                    "ipv6_address": null,
+                                                    "local_as": null,
+                                                    "log_neighbor_changes": null,
+                                                    "maximum_prefix": null,
+                                                    "neighbor_address": "10.200.200.2",
+                                                    "next_hop_unchanged": null,
+                                                    "nexthop_self": null,
+                                                    "password": null,
+                                                    "password_options": null,
+                                                    "path_attribute": null,
+                                                    "peer_group": null,
+                                                    "peer_group_name": null,
+                                                    "prefix_list": null,
+                                                    "prefix_lists": null,
+                                                    "remote_as": null,
+                                                    "remove_private_as": null,
+                                                    "route_map": null,
+                                                    "route_maps": null,
+                                                    "route_reflector_client": null,
+                                                    "route_server_client": null,
+                                                    "send_community": null,
+                                                    "shutdown": null,
+                                                    "slow_peer": null,
+                                                    "slow_peer_options": null,
+                                                    "soft_reconfiguration": null,
+                                                    "soo": null,
+                                                    "tag": null,
+                                                    "timers": null,
+                                                    "transport": null,
+                                                    "ttl_security": null,
+                                                    "unsuppress_map": null,
+                                                    "version": null,
+                                                    "weight": null
+                                                }
+                                            ],
+                                            "networks": [
+                                                {
+                                                    "address": "10.100.100.0",
+                                                    "backdoor": null,
+                                                    "evpn": null,
+                                                    "mask": "255.255.255.0",
+                                                    "route_map": null
+                                                },
+                                                {
+                                                    "address": "10.200.200.0",
+                                                    "backdoor": null,
+                                                    "evpn": null,
+                                                    "mask": "255.255.255.0",
+                                                    "route_map": null
+                                                }
+                                            ],
+                                            "redistribute": [
+                                                {
+                                                    "application": null,
+                                                    "bgp": null,
+                                                    "connected": null,
+                                                    "eigrp": null,
+                                                    "isis": null,
+                                                    "iso_igrp": null,
+                                                    "lisp": null,
+                                                    "mobile": null,
+                                                    "odr": null,
+                                                    "ospf": {
+                                                        "include_connected": null,
+                                                        "match": null,
+                                                        "metric": null,
+                                                        "process_id": 1,
+                                                        "route_map": null,
+                                                        "vrf": null
+                                                    },
+                                                    "ospfv3": null,
+                                                    "rip": null,
+                                                    "static": null,
+                                                    "vrf": null
+                                                }
+                                            ],
+                                            "safi": null,
+                                            "snmp": null,
+                                            "table_map": null,
+                                            "vrf": null
+                                        }
+                                    ],
+                                    "as_number": "65000"
+                                },
+                                "running_config": null,
+                                "state": "overridden"
+                            }
+                        }
+                    },
+                    "resolved_action": "cisco.ios.ios_bgp_address_family",
+                    "start": "2024-10-17T11:06:46.904188",
+                    "task": "Configure BGP Address Family Configuration on rtr1",
+                    "task_action": "cisco.ios.ios_bgp_address_family",
+                    "task_args": "",
+                    "task_path": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml:14",
+                    "task_uuid": "0e078a85-63f4-829f-8081-00000000000a",
+                    "uuid": "3c533a60-81f4-4622-92cd-e374024e49f4"
+                },
+                {
+                    "__changed": false,
+                    "__duration": "2s",
+                    "__host": "rtr2",
+                    "__number": 5,
+                    "__result": "Ok",
+                    "__task": "Configure BGP Address Family Configuration on rtr2",
+                    "__task_action": "cisco.ios.ios_bgp_address_family",
+                    "duration": 1.788738,
+                    "end": "2024-10-17T11:06:48.702962",
+                    "event_loop": null,
+                    "host": "rtr2",
+                    "play": "rtr1, rtr2",
+                    "play_pattern": "rtr1, rtr2",
+                    "play_uuid": "0e078a85-63f4-829f-8081-000000000006",
+                    "playbook": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml",
+                    "playbook_uuid": "2dd3315e-9f86-4849-a405-8c2f6bd9f2c0",
+                    "remote_addr": "rtr2",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "before": {
+                            "address_family": [
+                                {
+                                    "afi": "ipv4",
+                                    "neighbors": [
+                                        {
+                                            "activate": true,
+                                            "neighbor_address": "10.200.200.1"
+                                        }
+                                    ],
+                                    "networks": [
+                                        {
+                                            "address": "10.101.101.0",
+                                            "mask": "255.255.255.0"
+                                        },
+                                        {
+                                            "address": "10.200.200.0",
+                                            "mask": "255.255.255.0"
+                                        }
+                                    ],
+                                    "redistribute": [
+                                        {
+                                            "ospf": {
+                                                "process_id": 1
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "as_number": "65001"
+                        },
+                        "changed": false,
+                        "commands": [],
+                        "invocation": {
+                            "module_args": {
+                                "config": {
+                                    "address_family": [
+                                        {
+                                            "advertise": null,
+                                            "afi": "ipv4",
+                                            "aggregate_addresses": null,
+                                            "auto_summary": null,
+                                            "bgp": null,
+                                            "default": null,
+                                            "default_information": null,
+                                            "default_metric": null,
+                                            "distance": null,
+                                            "neighbors": [
+                                                {
+                                                    "activate": true,
+                                                    "additional_paths": null,
+                                                    "address": null,
+                                                    "advertise": null,
+                                                    "advertise_map": null,
+                                                    "advertisement_interval": null,
+                                                    "advertises": null,
+                                                    "aigp": null,
+                                                    "allow_policy": null,
+                                                    "allowas_in": null,
+                                                    "as_override": null,
+                                                    "bmp_activate": null,
+                                                    "capability": null,
+                                                    "cluster_id": null,
+                                                    "default_originate": null,
+                                                    "description": null,
+                                                    "disable_connected_check": null,
+                                                    "distribute_list": null,
+                                                    "dmzlink_bw": null,
+                                                    "ebgp_multihop": null,
+                                                    "fall_over": null,
+                                                    "filter_list": null,
+                                                    "ha_mode": null,
+                                                    "inherit": null,
+                                                    "internal_vpn_client": null,
+                                                    "ipv6_address": null,
+                                                    "local_as": null,
+                                                    "log_neighbor_changes": null,
+                                                    "maximum_prefix": null,
+                                                    "neighbor_address": "10.200.200.1",
+                                                    "next_hop_unchanged": null,
+                                                    "nexthop_self": null,
+                                                    "password": null,
+                                                    "password_options": null,
+                                                    "path_attribute": null,
+                                                    "peer_group": null,
+                                                    "peer_group_name": null,
+                                                    "prefix_list": null,
+                                                    "prefix_lists": null,
+                                                    "remote_as": null,
+                                                    "remove_private_as": null,
+                                                    "route_map": null,
+                                                    "route_maps": null,
+                                                    "route_reflector_client": null,
+                                                    "route_server_client": null,
+                                                    "send_community": null,
+                                                    "shutdown": null,
+                                                    "slow_peer": null,
+                                                    "slow_peer_options": null,
+                                                    "soft_reconfiguration": null,
+                                                    "soo": null,
+                                                    "tag": null,
+                                                    "timers": null,
+                                                    "transport": null,
+                                                    "ttl_security": null,
+                                                    "unsuppress_map": null,
+                                                    "version": null,
+                                                    "weight": null
+                                                }
+                                            ],
+                                            "networks": [
+                                                {
+                                                    "address": "10.101.101.0",
+                                                    "backdoor": null,
+                                                    "evpn": null,
+                                                    "mask": "255.255.255.0",
+                                                    "route_map": null
+                                                },
+                                                {
+                                                    "address": "10.200.200.0",
+                                                    "backdoor": null,
+                                                    "evpn": null,
+                                                    "mask": "255.255.255.0",
+                                                    "route_map": null
+                                                }
+                                            ],
+                                            "redistribute": [
+                                                {
+                                                    "application": null,
+                                                    "bgp": null,
+                                                    "connected": null,
+                                                    "eigrp": null,
+                                                    "isis": null,
+                                                    "iso_igrp": null,
+                                                    "lisp": null,
+                                                    "mobile": null,
+                                                    "odr": null,
+                                                    "ospf": {
+                                                        "include_connected": null,
+                                                        "match": null,
+                                                        "metric": null,
+                                                        "process_id": 1,
+                                                        "route_map": null,
+                                                        "vrf": null
+                                                    },
+                                                    "ospfv3": null,
+                                                    "rip": null,
+                                                    "static": null,
+                                                    "vrf": null
+                                                }
+                                            ],
+                                            "safi": null,
+                                            "snmp": null,
+                                            "table_map": null,
+                                            "vrf": null
+                                        }
+                                    ],
+                                    "as_number": "65001"
+                                },
+                                "running_config": null,
+                                "state": "overridden"
+                            }
+                        }
+                    },
+                    "resolved_action": "cisco.ios.ios_bgp_address_family",
+                    "start": "2024-10-17T11:06:46.914224",
+                    "task": "Configure BGP Address Family Configuration on rtr2",
+                    "task_action": "cisco.ios.ios_bgp_address_family",
+                    "task_args": "",
+                    "task_path": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml:14",
+                    "task_uuid": "0e078a85-63f4-829f-8081-00000000000a",
+                    "uuid": "7d5a6e68-17dc-46ce-844b-4b77d442fbcd"
+                }
+            ],
+            "uuid": "0e078a85-63f4-829f-8081-000000000006"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/student/lab_inventory/hosts"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/student/network-workshop/aap_workshop/configure_bgp.yaml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/student/network-workshop"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/student/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "quay.io/acme_corp/network-ee:latest",
+                "pull": {
+                    "policy": "missing"
+                },
+                "volume-mounts": [
+                    {
+                        "dest": "/etc/ansible",
+                        "src": "/etc/ansible"
+                    }
+                ]
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/student/network-workshop/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Settings file",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Settings file",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Settings file",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Settings file",
+        "ansible-navigator.execution-environment.volume-mounts": "Settings file",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/student/.ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "\u001b[33mWARN\u001b[0m[0000] The cgroupv2 manager is set to systemd but there is no systemd user session available ",
+        "\u001b[33mWARN\u001b[0m[0000] For using systemd, you may need to login using an user session ",
+        "\u001b[33mWARN\u001b[0m[0000] Alternatively, you can enable lingering with: `loginctl enable-linger 1001` (possibly as root) ",
+        "\u001b[33mWARN\u001b[0m[0000] Falling back to --cgroup-manager=cgroupfs    ",
+        "\u001b[33mWARN\u001b[0m[0000] The cgroupv2 manager is set to systemd but there is no systemd user session available ",
+        "\u001b[33mWARN\u001b[0m[0000] For using systemd, you may need to login using an user session ",
+        "\u001b[33mWARN\u001b[0m[0000] Alternatively, you can enable lingering with: `loginctl enable-linger 1001` (possibly as root) ",
+        "\u001b[33mWARN\u001b[0m[0000] Falling back to --cgroup-manager=cgroupfs    ",
+        "",
+        "PLAY [rtr1, rtr2] **************************************************************",
+        "",
+        "TASK [Load source-of-truth for rtr1] *******************************************",
+        "\u001b[0;32mok: [rtr1]\u001b[0m",
+        "\u001b[0;32mok: [rtr2]\u001b[0m",
+        "",
+        "TASK [Configure BGP Global Configuration on rtr1] ******************************",
+        "\u001b[0;32mok: [rtr2]\u001b[0m",
+        "\u001b[0;32mok: [rtr1]\u001b[0m",
+        "",
+        "TASK [Configure BGP Address Family Configuration on rtr1] **********************",
+        "\u001b[0;32mok: [rtr1]\u001b[0m",
+        "\u001b[0;32mok: [rtr2]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;32mrtr1\u001b[0m                       : \u001b[0;32mok=3   \u001b[0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   ",
+        "\u001b[0;32mrtr2\u001b[0m                       : \u001b[0;32mok=3   \u001b[0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}
