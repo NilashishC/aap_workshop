@@ -4,7 +4,7 @@
   tasks:
     - name: "Load source-of-truth for {{ inventory_hostname }}"
       ansible.builtin.include_vars:
-      file: ./source-of-truth/bgp/{{ inventory_hostname }}.yml
+        file: ./source-of-truth/bgp/{{ inventory_hostname }}.yml
 
     - name: "Configure BGP Global Configuration on {{ inventory_hostname }}"
       cisco.ios.ios_bgp_global:
